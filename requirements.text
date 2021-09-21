@@ -1,0 +1,38 @@
+Available commands:
+
+ add:                      Add the specified directories to the Python path for
+                           the currently active virtualenv.
+ cp:                       Duplicate the named virtualenv to make a new one.
+ dir:                      Print the path for the virtualenv directory
+ getproject:               Print a virtualenv's project directory, if set.
+ in:                       Run a command in the given virtualenv.
+ inall:                    Run a command in each virtualenv.
+ install:                  Use Pythonz to download and build the specified
+                           Python version
+ list_pythons:             List the pythons installed by Pythonz (or all the
+                           installable ones)
+ locate_python:            Locate the path for the python version installed by
+                           Pythonz
+ ls:                       List available environments.
+ lssitepackages:           Show the content of the site-packages directory of
+                           the current virtualenv.
+ mkproject:                Create a new project directory and its associated
+                           virtualenv.
+ mktmpenv:                 Create a temporary virtualenv.
+ new:                      Create a new environment, in $WORKON_HOME.
+ rename:                   Rename a virtualenv
+ restore:                  Try to restore a broken virtualenv by reinstalling
+                           the same python version on top of it
+ rm:                       Remove one or more environment, from $WORKON_HOME.
+ setproject:               Given a virtualenv directory and a project directory,
+                           set the
+ shell_config:             Prints the path for the current $SHELL helper file
+ show
+ sitepackages_dir
+ toggleglobalsitepackages: Toggle the current virtualenv between having and not
+                           having access to the global site-packages.
+ uninstall:                Use Pythonz to uninstall the specified Python version
+ version:                  Prints current pew version
+ wipeenv:                  Remove all installed packages from the current (or
+                           supplied) env.
+ workon:                   List or change working virtual environments.
