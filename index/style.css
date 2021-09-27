@@ -1,3 +1,62 @@
 .navlogo {
     height:44px;
 }
+
+.navWrap{
+    justify-content: space-between;
+}
+
+.navImg{
+    max-width: 88px;
+    max-height: 88px;
+}
+
+body {
+    background-color: #004e66;
+}
+
+.carousel-wrap-limiter {
+    max-width: 600px;
+    height: auto;
+}
+
+.carousel-image{
+    width: 100%;
+}
+
+.primary-section {
+    background-color: #007cac;
+}
+
+.crimsonbg {
+    background-color: crimson;
+}
+
+.whitebg{
+    background-color:white;
+}
+
+.main-container {
+    background-color: white;
+}
+
+#main-video-container {
+    background-color: white;
+}
+
+#footer {
+    background-color: #004e66;
+}
+
+.white-text{
+    color: white;
+}
+
+.thumbnail{
+    max-height: 150px;
+    width: auto;
+}
+
+.text-nowrap{
+    white-space: nowrap;
+}

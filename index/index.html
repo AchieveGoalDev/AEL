@@ -40,54 +40,118 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="英検対策" aria-label="Search">
+                <button class="btn btn-outline-danger d-inline-block text-nowrap" type="submit">検索</button>
             </form>
-            </div>
+            <div class="mx-2">|</div>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button>
         </div>
     </nav>
 </header>
 
 
 <body>
-    <section class ="hero">
-        <div class="container-sm">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/Carousel1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/Carousel4.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/Carousel2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/Carousel3.png" class="d-block w-100" alt="...">
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
+    <section class ="primary-section">
+        <div class="row">
+            <div class="spacer col-1"></div>
+            <div class="main-container shadow-lg col-10 my-5 rounded">
+                <h1 class="display-1">絶対アチーブ！絶対合格！</h1>
+                <div class="container-sm carousel-wrap-limiter">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/Carousel1.png" class="d-block carousel-image" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/Carousel4.png" class="d-block carousel-image" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/Carousel2.png" class="d-block carousel-image" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/Carousel3.png" class="d-block carousel-image" alt="...">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </div>
+            <div class="spacer col-1"></div>
             </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
-
-<footer>
-    <div class="footer-wrapper">
-        <div></div>
-        <div></div>
-        <div></div>
+<footer class ="inline-block pt-5" id="footer">
+    <div class="row">
+        <div class="spacer col-1"></div>
+        <div class="col px-4">
+            <p class="white-text">footer content here</p>
+            <p class="white-text">footer content here</p>
+            <p class="white-text">footer content here</p>
+            <p class="white-text">footer content here</p>
+            <p class="white-text">footer content here</p>
+            <p class="white-text">footer content here</p>
+        </div>
+        <div class="col px-4">
+            <div class="col px-4">
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+            </div>
+        </div>
+        <div class="col px-4">
+            <div class="col px-4">
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+                <p class="white-text">footer content here</p>
+            </div>
+        </div>
     </div>
+    <div class="spacer col-1"></div>
+    <span class="white-text text-end pr-1 pb-0">©2021, Achieve Goal, all rights reserved</span>
 </footer>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ログイン</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">ユーザー名</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text" placeholder="英語太郎123">ユーザー名を入力してください</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">パスワード</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <a class="btn btn-primary" href="./videos.html" role="button" target="_top">ログイン</a>
+                </form>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+        </div>
+    </div>
+</div>    
 
 </html>
