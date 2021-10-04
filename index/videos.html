@@ -34,17 +34,8 @@
             </li>
         </ul>
         <div class="d-flex border-start">
-            <div class="d-block">ShimazakiE</div>
-            <img class="navImg rounded-circle" src="../img/ErikPortrait.png">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                設定
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <div style="margin-top:auto;margin-bottom:auto;" class="mx-2 d-block h5 fw-bold">ShimazakiE</div>
+            <img class="navImg rounded-circle mx-2 border border-3 border-primary" src="../img/ErikPortrait.png">
         </div>
     </div>
 </nav>
@@ -58,12 +49,12 @@
                     <div class="container-fluid col box-shadow shadow-lg rounded" id="main-video-container">
                         <div class="container-fluid p-3" id="current-video-container">
                             <div class="row">
+                                <h2 class ="display-5 text-danger fw-bold">最近見た動画</h2>
                                 <div class="col p-3 shadow">
-                                    <h3 class="d-1">最近見た動画</h5>
-                                    <img class="thumbnail rounded" src="../img/Carousel2.png">
                                     <h4 class="d-2">Day 1 - 英検3級の攻略法</h4>
+                                    <img class="thumbnail rounded" src="../img/Carousel2.png">
                                 </div>
-                                <p class="ps-4 col">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                    <div class ="col"><p class="ps-4"><h3 style="color:#004e66;">動画の内容</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
                             </div>
                         </div>
                     </div>
@@ -79,7 +70,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Day 1</h4>
                                     <h5 class="card-title">英検3級の攻略法</h5>
-                                    <p class="card-text">どこは九月引続きその理解通りというのの上がするたませ。よし途中と意味論もそのうちその参考たたなどの吹き込んてならで</p>
+                                    <p class="card-text"><p>どこは九月引続きその理解通りというのの上がするたませ。よし途中と意味論もそのうちその参考たたなどの吹き込んてならで</p>
                                     <a href="#" class="btn btn-danger">見よう！</a>
                                 </div>
                                 </div>
@@ -150,20 +141,104 @@
                 </div>
             </section>
         </div>
+        <div class= "rightColumn col-2">
+            <div style= "height:auto;"class ="container-fluid secondary-section shadow-lg whitebg rounded p-0 mb-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingA">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA" aria-expanded="false" aria-controls="collapseA">
+                            <img class="image-fluid inline-block me-3"src="../svg/face_black_24dp.svg"> ユーザー
+                        </button>
+                      </h2>
+                      <div id="collapseA" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          ユーザーの情報の一覧↓
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingB">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB" aria-expanded="false" aria-controls="collapseB">
+                            <img class="image-fluid inline-block me-3"src="../svg/settings_black_24dp.svg">設定
+                        </button>
+                      </h2>
+                      <div id="collapseB" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          個人設定の一覧↓
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
 
-        <div class ="container-fluid secondary-section col-2 p-3 shadow-lg whitebg rounded">
-        
-            <ul>
-                <li>Here</li>
-                <li>Is</li>
-                <li>Some</li>
-                <li>Stuff</li>
-                <li>On</li>
-                <li>The</li>
-                <li>Sides</li>
-            </ul>
+            </div>
+            <div style= "height:auto;"class ="container-fluid secondary-section shadow-lg whitebg rounded p-0">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <img class="image-fluid inline-block me-3"src="../svg/menu_book_black_24dp.svg">リーディング
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          リーディング動画の一覧↓
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <img class="image-fluid inline-block me-3"src="../svg/hearing_black_24dp.svg">リスニング
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            リスニング動画の一覧↓
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">  
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <img class="image-fluid inline-block me-3"src="../svg/question_answer_black_24dp.svg">面接
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            面接動画の一覧
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">  
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ライティング
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              ライティング動画の一覧
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">  
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            その他
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              その他の動画ツールの一覧↓
+                          </div>
+                        </div>
+                      </div>
+                  </div>
 
+            </div>
         </div>
+        
     </div>
 
 </body>
