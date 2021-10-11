@@ -1,8 +1,9 @@
 from django.http import HttpResponse
+from django.template.loader import render_to_string
 
-HTML_STRING ="""
-<h1>Hello World!</h1>
-"""
+templ= render_to_string("baseunl.html")
+test = '<h1>Test</h1>'
 
 def index(request):
-    return HttpResponse(HTML_STRING)
+    return HttpResponse(templ)
+
