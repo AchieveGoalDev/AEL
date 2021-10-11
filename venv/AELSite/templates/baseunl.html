@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -14,38 +13,10 @@
 	</head>
 
 	<header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-					<div class="container-fluid">
-							<a class="navbar-brand" href="index.html"><div class="container-fluid"><embed class ="navlogo"src="{% static '/img/AELLogoFull.svg' %}"></div></a>
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-									<li class="nav-item"></li>
-									<a class="nav-link active" aria-current="page" href="#">Home</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-									</li>
-									<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-											Dropdown
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<li><a class="dropdown-item" href="#">Action</a></li>
-											<li><a class="dropdown-item" href="#">Another action</a></li>
-											<li><hr class="dropdown-divider"></li>
-											<li><a class="dropdown-item" href="#">Something else here</a></li>
-									</ul>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-									</li>
-							</ul>
-							<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button>
-					</div>
-			</nav>
+		{% include 'navigation.html' %}
+		{% block navContent %}
+
+		{% endblock navContent %}
 	</header>
 
 
@@ -53,14 +24,10 @@
 		<section class ="primary-section px-5 py-5">
 			<div class="main-container shadow rounded">
 				<div class ="main-content-wrapper">
-					<h1>Content Here</h1>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
-					<p>Here is some content</p>
+					{% include 'heroContent.html' %}
+					{% block heroContent %}
+
+					{% endblock heroContent %}
 				</div>
 			</div>
 		</section>
@@ -68,24 +35,10 @@
 	</body>
 
 	<footer class ="inline-block pt-5" id="footer">
-			<div class="row">
-					<div class="spacer col-1"></div>
-					<div class="col px-4">
-							<p class="white-text">footer empty</p>
-					</div>
-					<div class="col px-4">
-							<div class="col px-4">
-									<p class="white-text">footer empty</p>
-							</div>
-					</div>
-					<div class="col px-4">
-							<div class="col px-4">
-									<p class="white-text">footer empty</p>
-							</div>
-					</div>
-			</div>
-			<div class="spacer col-1"></div>
-			<span class="white-text text-end pr-1 pb-0">©2021, Achieve Goal, all rights reserved</span>
+		{% include 'footer.html' %}
+		{% block footerContent %}
+
+		{% endblock footerContent %}
 	</footer>
 
 

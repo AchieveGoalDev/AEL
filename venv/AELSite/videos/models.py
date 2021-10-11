@@ -6,3 +6,4 @@ class Video(models.Model):
     day = models.TextField()
     short_description = models.TextField()
     long_description = models.TextField()
+
