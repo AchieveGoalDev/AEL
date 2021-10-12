@@ -1,9 +1,12 @@
 from django.http import HttpResponse
-from django.template.loader import render_to_string
 from django.shortcuts import render
 
-templ= render_to_string("baseunl.html")
-
 def index(request):
-    return HttpResponse(templ)
+    return render(request, 'heroContent.html')
+
+def faq(request):
+    return render(request, 'faqContent.html')
+
+def contact(request):
+    return render(request, 'contactContent.html')
 

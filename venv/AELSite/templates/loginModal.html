@@ -1,0 +1,28 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">ログイン</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form method ="POST">{% csrf_token %}
+					<div class="mb-3">
+						<label for="username" class="form-label">ユーザー名</label>
+						<input type="text" class="form-control" id="username" name="username-input" placeholder="英語太郎123">
+						<div id="username-help" class="form-text">ユーザー名を入力してください</div>
+					</div>
+					<div class="mb-3">
+						<label for="password" class="form-label" name="password-input">パスワード</label>
+						<input type="password" class="form-control" id="password">
+					</div>
+					<button type ='submit' class ='btn btn-primary'>ログイン</button>
+					<!-- <a class="btn btn-primary" href="./videos.html" role="button" target="_top">ログイン</a> -->
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+			</div>
+		</div>
+	</div>
+</div>    

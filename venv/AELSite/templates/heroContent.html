@@ -1,15 +1,76 @@
-{% block heroContent %}
-<div class="row p-2">
-    <div class= "col-6">
-        <h1 class ="display-5">AEL Promise</h1>
-        <p>A short bit on the benefits of AEL for the hero content</p>
-        <div class ="container-fluid d-inline-flex justify-content-evenly">
-					<button type ="button" class="btn btn-primary d-inline">詳しくはこちら</button>
-					<button type ="button" class="btn btn-danger d-inline">お問い合わせ</button>
-        </div>
-    </div>
-    <div class= "container-fluid col-6">
-			<p>carousel content</p>
-    </div>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row pt-4 px-4">
+	<div class="col"></div>
+	<div class= "col-4">
+		<h1 class="display-4">いつでも、</h1>
+		<h1 class="display-4">どこでも、</h1>
+		<h1 class="text-danger display-4 fw-bold">絶対合格</h1>
+		<h1 class="display-4 fw-bold">オンデマンド講座</h1>
+		<p class="fs-4 mt-5">英検が初めてでも、忙しくても、自宅でも。筆記から面接まで、全て網羅したレッスン映像とテキスト冊子で、絶対合格を目指しましょう。<p>
+		<div class ="container-fluid d-inline-flex justify-content-evenly mt-5">
+		</div>
+	</div>
+	<div class= "container-fluid col-6">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{% static '/img/Carousel1Pre.png' %}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="{% static '/img/Carousel2Pre.png' %}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="{% static '/img/Carousel3.png' %}" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<div class="col"></div>
+	<div class="d-flex justify-content-evenly">
+		<div class="card mx-5 mb-5">
+			<div class="card-body">
+				<h5 class="card-title">導入手順</h5>
+				<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="card-link">Card link</a>
+				<a href="#" class="card-link">Another link</a>
+			</div>
+		</div>
+		<div class="card mx-3 mb-5">
+			<div class="card-body">
+				<h5 class="card-title">講座の特徴</h5>
+				<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="card-link">Card link</a>
+				<a href="#" class="card-link">Another link</a>
+			</div>
+		</div>
+		<div class="card mx-5 mb-5">
+			<div class="card-body mx-3 mb-5">
+				<h5 class="card-title">講師陣について</h5>
+				<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="card-link">Card link</a>
+				<a href="#" class="card-link">Another link</a>
+			</div>
+		</div>
+	</div>
 </div>
-{% endblock heroContent %}
+{% endblock content %}
