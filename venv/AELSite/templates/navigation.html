@@ -9,23 +9,37 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"></li>
-							<a class="nav-link" id="indexLink" href="">ホーム</a>
+						<li class="nav-item border-start border-end"></li>
+							<a class="nav-link fw-bold" id="indexLink" href="{% url 'index' %}">ホーム</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html" id="aboutLink">AELについて</a>
+							<a class="nav-link fw-bold border-start border-end" href="about.html" id="aboutLink">AELについて</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="courseInfoLink" href="aboutvideo.html">コース情報</a>
+							<a class="nav-link fw-bold border-start border-end" id="courseInfoLink" href="aboutvideo.html">コース情報</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="contactLink" href="contact">お問い合わせ</a>
+							<a class="nav-link fw-bold border-start border-end" id="contactLink" href="{% url 'contact' %}">お問い合わせ</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="faqLink" href="faq/">FAQ</a>
+						<li class="nav-item fw-bold border-start border-end">
+							<a class="nav-link" id="faqLink" href="{% url 'faq' %}">FAQ</a>
 						</li>
 					</ul>
-			<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button>
+					<ul class="navbar-nav">
+						<li>
+							{% if not request.user.is_authenticated %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'login' %}">ログイン</a>
+							</div>
+							{% else %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'logout' %}">ログアウト</a>
+							</div>
+							{% endif %}
+						</li>
+			<!-- <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button> -->
 		</div>
 	</nav>
 

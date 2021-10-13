@@ -18,10 +18,15 @@ from django.contrib import admin
 from django.urls import path
 
 from .views import index, faq, contact
+from users.views import login_view, logout_view
+from videos.views import videos
 
 urlpatterns = [
     path('', index, name="index"),
-    path('admin', admin.site.urls, name="admin"),
+    path('admin/', admin.site.urls, name="admin"),
     path('faq/', faq, name="faq"),
     path('contact/', contact, name="contact"),
+    path('login/', login_view, name="login"),
+    path('logout/', logout_view, name='logout'),
+    path('videos/', videos, name='videos')
 ]

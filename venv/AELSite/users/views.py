@@ -1,17 +1,21 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 
 def login_view(request):
     if  request.method == "POST":
-        username = request.post.get("username")
-        password = request.post.get("password")
+        username = request.POST.get("username")
+        password = request.POST.get("password")
         user = authenticate(request, username=username, password=password)
         if user is None:
-            pass
-    return render(request, "accounts/login.html", {})
+            context ={'error':'ユーザー名またはパスワードは違います'}
+            return render(request, 'login.html', context)
+        login(request, user)
+        return redirect('/admin')
+    return render(request, 'login.html')
+
 
 def logout_view(request):
-    return render(request, "accounts/logout.html", {})
-
-def register_view(request):
-    return render(request, "accounts/register.html")
+    if request.method =="POST":
+        logout(request)
+        return redirect('login')
+    return render(request, "logout.html", {})

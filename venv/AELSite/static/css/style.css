@@ -38,23 +38,19 @@ body {
 }
 
 .primary-section {
-    background-image:linear-gradient(#04b3e4, #107dad);
-}
-
-.crimsonbg {
-    background-color: crimson;
+  background-image:linear-gradient(#04b3e4, #107dad);
 }
 
 .whitebg{
-    background-color:white;
+  background-color:white;
 }
 
 .main-container {
-    background-color: white;
+  background-color: white;
 }
 
 #main-video-container {
-    background-color: white;
+  background-color: white;
 }
 
 #footer {
@@ -73,6 +69,11 @@ body {
 .text-nowrap{
     white-space: nowrap;
 }
+
+.light-blue-bg {
+  background-color: #96d4e2 !important;
+}
+
 
 /* <header class="p-3 mb-3 border-bottom">
     <div class="container">

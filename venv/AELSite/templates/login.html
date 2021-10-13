@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block loginContent %}
+{% if not request.user.is_authenticated %}
+<div class ="row">
+	<div class="col-3"></div>
+	<div class="col-6">
+		<div class="main-container roudned shadow mt-5">
+			<h2 class="bg-danger text-white fw-bold p-2" >ログイン</h2>
+			<form class="m-3" method="POST"> {% csrf_token %}
+				<div class="mb-3">
+					<label for="usernameInput" class="form-label">ユーザー名</label>
+					<input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
+					<div id="usernameHelp" class="form-text">ユーザー名を入力してください</div>
+				</div>
+				<div class="mb-3">
+					<label for="passwordInput" class="form-label">パスワード</label>
+					<input type="password" name ="password" class="form-control" id="passwordInput">
+					<div id="passwordHelp" class="form-text">大文字などに注意してください</div>
+				</div>
+				<div class="mb-3 form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1">
+					<label class="form-check-label fst-italic fs-6" for="exampleCheck1">このボタンをクリックすることで、Achieve English Learningの利用規約とプライバシーポリシーに同意します。 </label>
+				</div>
+
+				{% if error %}
+					<p class="text-danger">{{ error }}</p>
+				{% endif %}
+
+				<button type="submit" class="btn btn-primary m-3">ログイン</button>
+			</form>
+		</div>
+	</div>
+	<div class="col-3"></div>
+</div>
+
+{% else %}
+<div class ="row">
+	<div class="col-3"></div>
+	<div class="col-6">
+		<div class="main-container roudned shadow mt-5">
+			<h2 class="bg-danger text-white fw-bold p-2" >ログイン</h2>
+			<p>もうすでにログインしてます！</p>
+			<p><a href="{% url 'logout' %}">ログアウト</a>しますか?</p>
+		</div>
+	</div>
+	<div class="col-3"></div>
+</div>
+
+{% endif %}
+
+{% endblock loginContent %}

@@ -11,7 +11,10 @@
 			<link type ="text/css" rel="stylesheet" href="{% static '/css/style.css' %}">
 			<title>Achieve English Learning</title>
 	</head>
+	{% include 'navigation.html' %}
 
+	{% block navContent %}
+	{% endblock navContent %}
 	<header>
 	</header>
 
@@ -19,10 +22,6 @@
 	<body>
 		<section class ="primary-section px-5 py-5">
 			<div class="main-container shadow rounded">
-				{% include 'navigation.html' %}
-
-				{% block navContent %}
-				{% endblock navContent %}
 				<div class ="main-content-wrapper">
 					{% block content %}
 

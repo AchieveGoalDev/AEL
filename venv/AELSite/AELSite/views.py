@@ -9,4 +9,3 @@ def faq(request):
 
 def contact(request):
     return render(request, 'contactContent.html')
-

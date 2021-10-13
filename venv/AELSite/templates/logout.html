@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block loginContent %}
+{% if request.user.is_authenticated %}
+<div class ="row">
+	<div class="col-3"></div>
+	<div class="col-6">
+		<div class="main-container roudned shadow mt-5">
+			<h2 class="bg-danger text-white fw-bold p-2" >ログアウト</h2>
+            <p>Bye!</p>
+            <form method='POST'> {% csrf_token %}
+                <button type="submit" class="btn btn-primary m-3">ログアウト</button>
+            </form>
+		</div>
+	</div>
+	<div class="col-3"></div>
+</div>
+
+{% else %}
+<!-- Fill out this bit -->
+<p>Already logged in!</p>
+
+{% endif %}
+
+{% endblock loginContent %}

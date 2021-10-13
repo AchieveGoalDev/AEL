@@ -13,25 +13,37 @@
 	</head>
 
 	<header>
+        {% include 'navigation.html' %}
+
+        {% block navContent %}
+        {% endblock navContent %}
 	</header>
 
 
 	<body>
 		<section class ="primary-section px-5 py-5">
-			<div class="main-container shadow rounded">
-				{% include 'navigation.html' %}
+			<div class="row">
+				<div class="main-container shadow rounded col-8 me-5">
+					<div class ="main-content-wrapper">
+						<p>stuff here</p>
+						{% block content %}
 
-				{% block navContent %}
-				{% endblock navContent %}
-				<div class ="main-content-wrapper">
-					{% block content %}
+						{% endblock content %}
+					</div>
+				</div>
 
-					{% endblock content %}
+				<div class="main-container shadow rounded col-3">
+					<div class ="main-content-wrapper">
+						<ul>
+							<li>stuff</li>
+							<li>morestuff</li>
+						</ul>
+						{% block listContent %}
+
+						{% endblock listContent %}
+					</div>
 				</div>
 			</div>
-			{% block loginContent %}
-
-			{% endblock loginContent %}
 		</section>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	</body>
@@ -42,9 +54,5 @@
 
 		{% endblock footerContent %}
 	</footer>
-
-		{% include 'loginModal.html' %}
-		{% block loginModal %}
-		{% endblock loginModal %}
 
 </html>
