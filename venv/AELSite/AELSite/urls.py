@@ -19,7 +19,7 @@ from django.urls import path
 
 from .views import index, faq, contact
 from users.views import login_view, logout_view
-from videos.views import videos
+from videos.views import videos, video
 
 urlpatterns = [
     path('', index, name="index"),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('contact/', contact, name="contact"),
     path('login/', login_view, name="login"),
     path('logout/', logout_view, name='logout'),
-    path('videos/', videos, name='videos')
+    path('videos/', videos, name='videos'),
+    path('video/', video, name='video')
 ]

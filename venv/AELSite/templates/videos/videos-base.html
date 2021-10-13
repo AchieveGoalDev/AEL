@@ -33,15 +33,10 @@
 				</div>
 
 				<div class="main-container shadow rounded col-3">
-					<div class ="main-content-wrapper">
-						<ul>
-							<li>stuff</li>
-							<li>morestuff</li>
-						</ul>
-						{% block listContent %}
-
-						{% endblock listContent %}
-					</div>
+					{% include 'videos/list-content.html' %}
+					
+					{% block listContent%}
+					{% endblock listContent %}
 				</div>
 			</div>
 		</section>
