@@ -9,5 +9,5 @@ class VideoForm(forms.ModelForm):
             'title',
             'day',
             'short_description',
-            'long_description'
+            'long_description',
         ]
