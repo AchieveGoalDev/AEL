@@ -1,7 +1,25 @@
 <ul class="list-group">
-    <li class="list-group-item">test stuff</li>
-    <li class="list-group-item">test stuff</li>
-    <li class="list-group-item">test stuff</li>
-    <li class="list-group-item">test stuff</li>
-    <li class="list-group-item">test stuff</li>
-  </ul>
+  {% for item in categories %}
+    <li class="list-group-item">{{ item.name }}</li>
+  {% endfor %}
+</ul>
+
+<div class="accordion" id="accordionExample">
+
+  {% for item in categories %}
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="{{ item.name }}">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ item.name }}" aria-expanded="false" aria-controls="collapseOne">
+        {{ item.name }}
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        {% for item in categories.videos %}
+        <p>{{ item }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
