@@ -1,23 +1,16 @@
-<ul class="list-group">
-  {% for item in categories %}
-    <li class="list-group-item">{{ item.name }}</li>
-  {% endfor %}
-</ul>
 
 <div class="accordion" id="accordionExample">
-
-  {% for item in categories %}
+  {% for mycategory in categorylist %}
   <div class="accordion-item">
-    <h2 class="accordion-header" id="{{ item.name }}">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ item.name }}" aria-expanded="false" aria-controls="collapseOne">
-        {{ item.name }}
+    <h2 class="accordion-header" id="{{ mycategory.name }}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{  mycategory.id }}" aria-expanded="false" aria-controls="collapse{{ mycategory.id }}">
+        <strong>{{ mycategory.name }} {% if mycategory.associated_skill.name != mycategory.name and mycategory.associated_skill != None %} - {{ mycategory.associated_skill}}{% else %}{% endif %}</strong>
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapse{{ mycategory.id }}" class="accordion-collapse collapse" aria-labelledby="{{ mycategory.name }}">
       <div class="accordion-body">
-        {% for item in categories.videos %}
-        <p>{{ item }}</p>
-        {% endfor %}
+          {% for video in videolist %}
+          {% if video.category.name == mycategory.name %} <p>{{ video.title }}</p>{% endif %}{% endfor %}
       </div>
     </div>
   </div>

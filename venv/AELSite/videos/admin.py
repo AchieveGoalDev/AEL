@@ -7,7 +7,7 @@ class TestAdmin(admin.ModelAdmin):
     filter_horizontal= ('skills_tested',)
 
 class CourseAdmin(admin.ModelAdmin):
-    filter_horizontal =('categories',)
+    filter_horizontal =('skills_taught',)
 
 class VideoAdmin(admin.ModelAdmin):
     filter_horizontal = ('additional_skills',)
@@ -17,5 +17,5 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Video, VideoAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Skill)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Test, TestAdmin)
+admin.site.register(Category)
+admin.site.register(Test)

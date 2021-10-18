@@ -25,18 +25,17 @@
 			<div class="row">
 				<div class="main-container shadow rounded col-8 me-5">
 					<div class ="main-content-wrapper">
-						<p>stuff here</p>
+						{% include 'videos/video-summary-content.html' %}
 						{% block content %}
 
 						{% endblock content %}
 					</div>
 				</div>
-
-				<div class="main-container shadow rounded col-3">
-					{% include 'videos/list-content.html' %}
-					
-					{% block listContent%}
-					{% endblock listContent %}
+				<div class="col-3">
+				{% include 'videos/list-content.html' %}
+				
+				{% block listContent%}
+				{% endblock listContent %}
 				</div>
 			</div>
 		</section>
