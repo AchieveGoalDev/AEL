@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
 from .models import Video, Course, Skill, Category, Test
 
 class TestAdmin(admin.ModelAdmin):

@@ -8,9 +8,11 @@
       </button>
     </h2>
     <div id="collapse{{ mycategory.id }}" class="accordion-collapse collapse" aria-labelledby="{{ mycategory.name }}">
-      <div class="accordion-body">
+      <div class="accordion-body p-0">
           {% for video in videolist %}
-          {% if video.category.name == mycategory.name %} <p>{{ video.title }}</p>{% endif %}{% endfor %}
+          <ul class="list-group">
+          {% if video.category.name == mycategory.name %}<li class="list-group-item">Day {{ video.day }} - {{ video.title }}</li>{% endif %}{% endfor %}
+          </ul>
       </div>
     </div>
   </div>
