@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import index, faq, contact
+from .views import index, contact
 from users.views import login_view, logout_view
 from videos.views import videos, video
+from faq.views import faq
 
 urlpatterns = [
     path('', index, name="index"),

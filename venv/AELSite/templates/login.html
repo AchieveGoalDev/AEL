@@ -1,37 +1,54 @@
-{% extends 'base.html' %}
+{% extends 'base-no-nav.html' %}
+{% load static %}
 
 {% block loginContent %}
 {% if not request.user.is_authenticated %}
-<div class ="row">
-	<div class="col-3"></div>
-	<div class="col-6">
-		<div class="main-container roudned shadow mt-5">
-			<h2 class="bg-danger text-white fw-bold p-2" >ログイン</h2>
-			<form class="m-3" method="POST"> {% csrf_token %}
-				<div class="mb-3">
-					<label for="usernameInput" class="form-label">ユーザー名</label>
-					<input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
-					<div id="usernameHelp" class="form-text">ユーザー名を入力してください</div>
+<div class ="row ">
+	<div class="col-2"></div>
+	<div class="col-8">
+		<div class="row main-container rounded shadow mt-5">
+			<div class="col-5 bg-danger p-5 rounded">
+				<div class="d-flex align-content-evenly">
+					<img class="img-fluid p-5" src="{% static '/siteImg/loginMedallion.svg' %}">
 				</div>
-				<div class="mb-3">
-					<label for="passwordInput" class="form-label">パスワード</label>
-					<input type="password" name ="password" class="form-control" id="passwordInput">
-					<div id="passwordHelp" class="form-text">大文字などに注意してください</div>
+				<h2 class = "text-white">Acheive English Learningへ</h2>
+				<h2 class = "display-4 text-white">ようこそ！</h2>
+				<p class="text-white">ログインして、英語の合格を目指そう!</p>
+				<div class="d-flex justify-content-evenly p-4">
+					<p class="text-white">blahblahblah</p><button type="button" class="btn btn-primary" href="{% url 'index' %}">AELについて</button>
 				</div>
-				<div class="mb-3 form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label fst-italic fs-6" for="exampleCheck1">このボタンをクリックすることで、Achieve English Learningの利用規約とプライバシーポリシーに同意します。 </label>
-				</div>
+			</div>
+			<span class="col-7 p-4 align-middle">
+				<form class="m-3" method="POST"> {% csrf_token %}
+					<h1 class="display-3 my-5">会員ログイン</h1>
+					<div class="mb-3">
+						<label for="usernameInput" class="form-label">ユーザー名</label>
+						<input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
+						<div id="usernameHelp" class="form-text">ユーザー名を入力してください</div>
+					</div>
+					<div class="mb-3">
+						<label for="passwordInput" class="form-label">パスワード</label>
+						<input type="password" name ="password" class="form-control" id="passwordInput">
+						<div id="passwordHelp" class="form-text">大文字などに注意してください</div>
+					</div>
+					<div class="mb-3 form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label fst-italic fs-6" for="exampleCheck1">このボタンをクリックすることで、Achieve English Learningの利用規約とプライバシーポリシーに同意します。 </label>
+					</div>
 
-				{% if error %}
-					<p class="text-danger">{{ error }}</p>
-				{% endif %}
+					{% if error %}
+						<p class="text-danger">{{ error }}</p>
+					{% endif %}
 
-				<button type="submit" class="btn btn-primary m-3">ログイン</button>
-			</form>
+					<div span="d-inline">
+						<a href="#" class="me-5">パスワードを忘れた場合</a>
+						<button type="submit" class="btn btn-primary m-3">ログイン</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
-	<div class="col-3"></div>
+	<div class="col-2"></div>
 </div>
 
 {% else %}

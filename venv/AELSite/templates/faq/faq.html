@@ -2,5 +2,9 @@
 
 {% block content %}
 
+{% for question in questions %}
+<h4 class="d-6">{{ question.question }}</h4>
+<p>{{ question.answer }}</p>
+{% endfor %}
 
 {% endblock content %}

@@ -10,6 +10,10 @@
   border-radius:2px;
 }
 
+.cover-img-container img{
+  height: 100%;
+  object-fit:cover;
+  }
 
 .navlogo {
     height:44px;
