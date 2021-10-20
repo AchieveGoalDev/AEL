@@ -9,4 +9,4 @@ def unpack():
     return context
 
 def faq(request):
-    return render(request, 'faq/faq.html', context = unpack())
+    return render(request, 'faq.html', context = unpack())

@@ -1,0 +1,204 @@
+<!-- Start base-nav-top.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="jp">
+	
+	<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<link type ="text/css" rel="stylesheet" href="{% static '/css/style.css' %}">
+			<title>Achieve English Learning</title>
+	</head>
+	{% include 'navigation.html' %}
+
+	{% block navContent %}
+	{% endblock navContent %}
+	<header>
+	</header>
+
+<!-- End base-nav-top.html -->
+
+<!-- Start base-no-nav.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="jp">
+	
+	<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<link type ="text/css" rel="stylesheet" href="{% static '/css/style.css' %}">
+			<title>Achieve English Learning</title>
+	</head>
+
+	<header>
+	</header>
+
+
+	<body>
+		<section class ="primary-section px-3 pb-5">
+			<div class="main-container shadow rounded">
+				<div class ="main-content-wrapper">
+					{% block content %}
+
+					{% endblock content %}
+				</div>
+			</div>
+			{% block loginContent %}
+
+			{% endblock loginContent %}
+		</section>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+
+	<footer class ="inline-block pt-5" id="footer">
+		{% include 'footer.html' %}
+		{% block footerContent %}
+
+		{% endblock footerContent %}
+	</footer>
+
+		{% include 'loginModal.html' %}
+		{% block loginModal %}
+		{% endblock loginModal %}
+
+</html>
+
+<!-- End base-no-nav.html -->
+
+<!-- Start base.html -->
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="jp">
+	
+	<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<link type ="text/css" rel="stylesheet" href="{% static '/css/style.css' %}">
+			<title>Achieve English Learning</title>
+	</head>
+
+	<header>
+	</header>
+
+
+	<body>
+		<section class ="primary-section px-5 py-5">
+			<div class="main-container shadow rounded">
+				{% include 'navigation.html' %}
+
+				{% block navContent %}
+				{% endblock navContent %}
+				<div class ="main-content-wrapper">
+					{% block content %}
+
+					{% endblock content %}
+				</div>
+			</div>
+			{% block loginContent %}
+
+			{% endblock loginContent %}
+		</section>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+
+	<footer class ="inline-block pt-5" id="footer">
+		{% include 'footer.html' %}
+		{% block footerContent %}
+
+		{% endblock footerContent %}
+	</footer>
+
+		{% include 'loginModal.html' %}
+		{% block loginModal %}
+		{% endblock loginModal %}
+
+</html>
+
+<!-- End base.html -->
+
+<!-- Start footer.html -->
+
+{% block footerContent %}
+
+	<div class="row">
+		<div class="spacer col-1"></div>
+		<div class="col px-4">
+			<p class="white-text">footer content</p>
+		</div>
+		<div class="col px-4">
+			<p class="white-text">footer content</p>
+		</div>
+		<div class="col px-4">	
+			<p class="white-text">footer content</p>
+		</div>
+	</div>
+	<div class="spacer col-1"></div>
+	<span class="white-text text-end pr-1 pb-0">©2021, Achieve Goal, all rights reserved</span>
+
+{%  endblock footerContent %}
+
+<!-- End footer.html -->
+
+<!-- Start navigation.html -->
+
+{% block navContent %}
+{% load static %}
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html"><div class="container-fluid"><embed class ="navlogo"src="{% static '/img/AELLogoFull.svg' %}"></div></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"></li>
+							<a class="nav-link fw-bold mx-1" id="indexLink" href="{% url 'index' %}">ホーム</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" href="about.html" id="aboutLink">AELについて</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" id="courseInfoLink" href="aboutvideo.html">コース情報</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" id="contactLink" href="{% url 'contact' %}">お問い合わせ</a>
+						</li>
+						<li class="nav-item fw-bold mx-1">
+							<a class="nav-link" id="faqLink" href="{% url 'faq' %}">FAQ</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav">
+						<li>
+							{% if not request.user.is_authenticated %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'login' %}">ログイン</a>
+							</div>
+							{% else %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'logout' %}">ログアウト</a>
+							</div>
+							{% endif %}
+						</li>
+			<!-- <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button> -->
+		</div>
+	</nav>
+
+{% endblock navContent %}
+
+<!-- End navigation.html -->

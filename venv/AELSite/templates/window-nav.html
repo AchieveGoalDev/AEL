@@ -1,0 +1,48 @@
+{% block navContent %}
+{% load static %}
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="{% url 'login' %}">
+				<img class="navImg" src="{% static '/siteImg/AELLogoFull.png' %}">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"></li>
+							<a class="nav-link fw-bold mx-1" id="indexLink" href="{% url 'login' %}">ホーム</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" href="{% url 'about' %}" id="aboutLink">AELについて</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" id="courseInfoLink" href="{% url 'courses' %}">コース情報</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold mx-1" id="contactLink" href="{% url 'contact' %}">お問い合わせ</a>
+						</li>
+						<li class="nav-item fw-bold mx-1">
+							<a class="nav-link" id="faqLink" href="{% url 'faq' %}">FAQ</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav">
+						<li>
+							{% if not request.user.is_authenticated %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'login' %}">ログイン</a>
+							</div>
+							{% else %}
+							<div class="d-inline-flex nav-item">
+								<img style="width:2rem; height:2rem;"class="img-fluid" src="{% static 'img/login.png' %}">
+								<a class="nav-link fw-bold" href="{% url 'logout' %}">ログアウト</a>
+							</div>
+							{% endif %}
+						</li>
+			<!-- <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ログイン</button> -->
+		</div>
+	</nav>
+
+{% endblock navContent %}

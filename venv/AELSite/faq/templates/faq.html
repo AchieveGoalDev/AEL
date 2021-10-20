@@ -1,0 +1,13 @@
+{% extends 'info-base.html' %}
+
+{% block infoContent %}
+{% include 'window-nav.html' %}
+<div class="container">
+    <h1 class="display-2">FAQ</h1>
+{% for question in questions %}
+<h4 class="d-6">{{ question.question }}</h4>
+<p>{{ question.answer }}</p>
+{% endfor %}
+</div>
+
+{% endblock infoContent %}
