@@ -13,8 +13,8 @@ def unpack():
 @login_required
 def videos(request):
     context = unpack()
-    return render(request, 'videos/videos-base.html', context)
+    return render(request, 'videos-base.html', context)
 
 @login_required
 def video(request):
-    return render(request, 'videos/view-video.html')
+    return render(request, 'view-video.html')

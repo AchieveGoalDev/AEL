@@ -18,4 +18,4 @@ def logout_view(request):
     if request.method =="POST":
         logout(request)
         return redirect('')
-    return render(request, "logout.html", {})
+    return render(request, "login.html", {})

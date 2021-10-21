@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --watch scss:venv/AELSite/static/css2"
+    "compile:sass": "sass --watch scss:venv/AELSite/static/css"
   },
   "repository": {
     "type": "git",
