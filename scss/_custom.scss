@@ -1,1 +1,10 @@
+$theme-colors: (
+    "primary":#C6000D,
+    "primary-desat":#e23642,
+    "secondary":#007CAC,
+    "secondary-light":#00B3E4
+    // "tertiary":#56423E,
+    // "tertiary-light":#56423E
+);
+
 @import"../node_modules/bootstrap/scss/bootstrap.scss";
