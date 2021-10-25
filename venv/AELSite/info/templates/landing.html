@@ -4,47 +4,26 @@
 
 {% block infoContent %}
 {% include 'window-nav.html' %}
-<div class="row pt-4 g-0">
+<div class="row mt-4 pt-4 g-0">
 	<div class="col"></div>
-	<div class= "col-4">
-		<h1 class="display-4">いつでも、</h1>
-		<h1 class="display-4">どこでも、</h1>
-		<h1 class="text-danger display-4 fw-bold">絶対合格</h1>
-		<h1 class="display-4 fw-bold">オンデマンド講座</h1>
-		<p class="fs-4 mt-5">英検が初めてでも、忙しくても、自宅でも。<p>
-			<p class="fs-4">筆記から面接まで、全て網羅したレッスン映像とテキスト冊子で、絶対合格を目指しましょう。<p>
+	<div class= "col-5">
+		<h1 class="display-5 fw-normal">英語試験の</h1>
+		<h1 class="display-4 fw-normal">悩みを全て</h1>
+		<h1 class="display-3 text-primary fw-bold mb-5">解決!</h1>
+		<h1 class="text-primary display-5 fw-bold">絶対合格</h1>
+		<h1 class="display-5 fw-normal">オンデマンド講座</h1>
+		<p class="fs-4 fw-bold mt-5">英検が初めてでも、忙しくても、自宅でも。<span class="text-secondary">筆記から面接まで</span>、全て網羅したレッスン映像とテキスト冊子で、<span class="text-primary">絶対合格</span>を目指しましょう。<p>
 		<div class ="container-fluid d-inline-flex justify-content-evenly mt-5">
 		</div>
 	</div>
-	<div class= "container-fluid col-lg-6">
-		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="{% static '/siteImg/Carousel1Pre.png' %}" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="{% static '/siteImg/Carousel2Pre.png' %}" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="{% static '/siteImg/Carousel3.png' %}" class="d-block w-100" alt="...">
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+	<div class= "container-fluid col-lg-5">
+		<img src="{% static '/siteImg/100big.svg' %}" class="img-fluid">
+		<div class="d-flex justify-content-evenly mt-5">
+			<a href="{% url 'courses' %}" class="btn btn-secondary btn-lg shadow fw-bold">講座の特徴</a>
+			<a href="{% url 'contact' %}" class="btn btn-primary btn-lg shadow fw-bold">今すぐ問い合わせ</a>
 		</div>
 	</div>
-	<div class="col"></div>
+	<div class="col col-md-0"></div>
 	<div class="p-5 d-flex rowjustify-content-evenly bg-primary-desat">
 		<div class="card mx-5 shadow rounded bg-secondary text-white border-0 landing-card">
 			<div class="card-body">
@@ -54,7 +33,7 @@
 					</svg>
 				</div>
 				<div class="d-flex justify-content-evenly my-4">
-					<h5 class="card-title">導入手順</h5>
+					<h5 class="card-title bg-white text-secondary fw-bold rounded p-1">導入手順</h5>
 				</div>
 				<p class="card-text">お申し込みの手順や必要な設備、授業に進む詳細なステップなどについて詳しく説明します。ご自宅で受講が可能か、確認してみましょう！</p>
 				<div class="d-flex justify-content-evenly"><a href="#" class="btn btn-primary">詳細</a></div>
@@ -68,10 +47,10 @@
 					</svg>
 				</div>
 				<div class="d-flex justify-content-evenly my-4">
-					<h5 class="card-title">講座の特徴</h5>
+					<h5 class="card-title bg-white text-secondary fw-bold rounded p-1">講座の特徴</h5>
 				</div>
 				<p class="card-text">彼らは一遍もっともその修養院とかいうのの時を指すうます。きっと今が就職児もしきりにその接近たまいまでに罹りて行くでをも注文会っなくたて、こうにはきま</p>
-				<div class="d-flex justify-content-evenly"><a href="#" class="btn btn-primary">詳細</a></div>
+				<div class="d-flex justify-content-evenly"><a href="{% url 'courses' %}" class="btn btn-primary">詳細</a></div>
 			</div>
 		</div>
 		<div class="card mx-5 shadow rounded bg-secondary text-white border-0 landing-card">
@@ -83,7 +62,7 @@
 					</svg>
 				</div>
 				<div class="d-flex justify-content-evenly my-4">
-					<h5 class="card-title">講師陣について</h5>
+					<h5 class="card-title bg-white text-secondary fw-bold rounded p-1">講師陣について</h5>
 				</div>
 				<p class="card-text">彼らは一遍もっともその修養院とかいうのの時を指すうます。きっと今が就職児もしきりにその接近たまいまでに罹りて行くでをも注文会っなくたて、こうにはきま</p>
 				<div class="d-flex justify-content-evenly"><a href="#" class="btn btn-primary">詳細</a></div>
