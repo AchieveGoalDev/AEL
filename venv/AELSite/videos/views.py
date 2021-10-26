@@ -11,6 +11,16 @@ def unpack():
     return context_dict
 
 @login_required
+def category(request):
+    context = models.Test.objects.all()
+    return render(request, 'test-view.html', context)
+
+@login_required
+def category(request):
+    context = models.Course.objects.all()
+    return render(request, 'course-view.html', context)
+
+@login_required
 def videos(request):
     context = unpack()
     return render(request, 'videos-base.html', context)

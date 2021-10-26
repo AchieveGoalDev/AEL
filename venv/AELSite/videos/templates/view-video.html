@@ -1,7 +1,11 @@
-{% extends 'videos/videos-base.html' %}
+{% extends 'videos-base.html' %}
+{% load static %}
 
 {% block content %}
-
-<iframe src="https://drive.google.com/file/d/1VDHBqoUNc6-op8NJd7OviCr6rYFgWn1i/preview" width="640" height="480" allow="autoplay"></iframe>
+<div class="fluid-vid ratio ratio-4x3">
+    <video controls>
+        <source src="{% static '/videos/D3.mp4' %}" type="video/mp4"/>
+    </video>
+</div>
 
 {% endblock content %}
