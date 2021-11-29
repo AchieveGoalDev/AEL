@@ -11,12 +11,12 @@ def unpack():
     return context_dict
 
 @login_required
-def category(request):
+def tests(request):
     context = models.Test.objects.all()
     return render(request, 'test-view.html', context)
 
 @login_required
-def category(request):
+def courses(request):
     context = models.Course.objects.all()
     return render(request, 'course-view.html', context)
 

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'faq',
     'users',
     'info',
+    'vendor_dashboard'
 ]
 
 MIDDLEWARE = [

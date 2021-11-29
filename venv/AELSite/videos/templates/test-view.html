@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for test in context %}
+
+<h1> {{ test.name }} </h1>
+
+{% endfor %}
+
+{% endblock content %}
